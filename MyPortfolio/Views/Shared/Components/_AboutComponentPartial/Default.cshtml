@@ -1,0 +1,16 @@
+﻿@model List<MyPortfolio.DAL.Entities.About>
+        <!-- About(Hakkında)-->
+@foreach (var item in Model)
+{
+    <section class="resume-section" id="about">
+        <div class="resume-section-content">
+            <h1 class="mb-0">
+                <span class="text-primary">@item.Title</span>
+            </h1>
+            @await Component.InvokeAsync("_ContactComponentPartial")
+            <p class="lead mb-5">@item.SubDescription.</p>
+            @await Component.InvokeAsync("_SocialMediaComponentPartial")
+
+        </div>
+    </section>
+}

@@ -1,0 +1,8 @@
+﻿@model List<Contact>
+@foreach (var item in Model)
+{
+    <div class="subheading mb-5">
+        @item.PostaKodu @item.adress1 · @item.adress2, @item.Phone1 ·
+        <a href="mailto:@item.Email1" target="_blank">@item.Email1</a>
+    </div>
+}
